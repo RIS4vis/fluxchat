@@ -1,0 +1,78 @@
+Crée une application web moderne de discussion sécurisée, inspirée de TikTok et WhatsApp, avec un design professionnel rouge, noir et or. L’application doit être entièrement fonctionnelle côté client (front-end only) et utiliser un service serverless comme Firebase pour l’authentification, la base de données temps réel, le stockage des médias et la gestion des appels vidéo via WebRTC.
+
+OBJECTIF :
+Créer une plateforme de discussion moderne, rapide, fluide, sécurisée et chiffrée, sans serveur personnel, sans API custom, sans panneau admin. L’application doit permettre une communication directe entre utilisateurs : texte, photos, vidéos, appels vidéo, et inscription par téléphone ou email.
+
+FONCTIONNALITÉS PRINCIPALES :
+1. Authentification :
+   - Inscription et connexion par email + mot de passe
+   - Connexion par numéro de téléphone (SMS)
+   - Gestion du profil utilisateur (photo, pseudo, statut)
+   - Stockage des utilisateurs dans Firestore
+
+2. Chat en direct (temps réel) :
+   - Liste de conversations
+   - Messages texte instantanés
+   - Envoi d’images et vidéos (upload Firebase Storage)
+   - Indicateur “en ligne / hors ligne”
+   - Système de notifications visuelles
+   - Messages chiffrés côté client avant envoi (E2E)
+
+3. Appels vidéo :
+   - Appels vidéo 1-to-1 via WebRTC
+   - Utilisation de Firestore comme serveur de signalisation
+   - Interface moderne avec deux flux vidéo (local + remote)
+   - Boutons : mute, caméra on/off, raccrocher
+
+4. Interface utilisateur :
+   - Design moderne inspiré TikTok
+   - Couleurs dominantes : noir (#000), rouge (#ff0050), or (#f5c542)
+   - Style minimaliste, animations fluides
+   - UI responsive mobile-first
+   - Typographie moderne (Poppins, Inter ou Manrope)
+
+5. Sécurité :
+   - Chiffrement des messages côté client (Web Crypto API)
+   - WebRTC chiffré par défaut
+   - Aucune donnée lisible en clair dans Firestore
+   - Pas d’interface admin
+   - Pas de logs sensibles
+
+6. Architecture technique :
+   - Framework : React ou Next.js (au choix)
+   - Style : Tailwind CSS
+   - Backend serverless : Firebase (Auth, Firestore, Storage)
+   - Appels vidéo : WebRTC + Firestore signaling
+   - Pas de serveur custom, pas d’API externe
+
+7. Structure du projet :
+   - /auth : pages login, signup, phone-login
+   - /chat : liste des conversations
+   - /chat/[id] : messages en temps réel
+   - /call/[id] : interface d’appel vidéo
+   - /components : UI réutilisable (inputs, buttons, message bubbles)
+   - /lib : firebaseConfig, encryption utils, webrtc utils
+   - /styles : tailwind config + global styles
+
+8. Fonctionnalités bonus :
+   - Mode sombre par défaut
+   - Effets de transition fluides
+   - Système de présence utilisateur
+   - Détection de saisie “l’utilisateur écrit...”
+   - Compression automatique des images avant upload
+   - Lecture vidéo intégrée dans le chat
+
+9. Déploiement :
+   - Préparer le projet pour un déploiement sur Vercel ou Netlify
+   - Ajouter les domaines autorisés dans Firebase Auth
+   - Optimiser les performances (lazy loading, code splitting)
+
+LIVRABLE ATTENDU :
+- Code complet de l’application
+- Structure de fichiers propre et professionnelle
+- Composants réutilisables
+- Documentation d’installation et de déploiement
+- Instructions pour connecter Firebase
+- Code clair, commenté, lisible et maintenable
+
+Génère le projet complet immédiatement.
